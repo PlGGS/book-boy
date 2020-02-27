@@ -1,23 +1,39 @@
 // Lets the user navigate the book.
-if (mouse_check_button_pressed(mb_left)) {
+if (keyboard_check_pressed(vk_right)) {
     // Moves one sheet ahead in the book.
-    if (point_in_rectangle(mouse_x, mouse_y, room_width * 0.5 + 48, room_height - 82, room_width * 0.5 + 102, room_height - 30)) {
-        ib_book_goto_sheet(book, 1, true);
-    }
-    
+	ib_book_goto_sheet(book, 1, true);
+}
+else if (keyboard_check_pressed(vk_left)) {
     // Moves one sheet back in the book.
-    if (point_in_rectangle(mouse_x, mouse_y, room_width * 0.5 - 102, room_height - 82, room_width * 0.5 - 48, room_height - 30)) {
-        ib_book_goto_sheet(book, -1, true);
-    }
-    
-    // Moves five sheets ahead in the book.
-    if (point_in_rectangle(mouse_x, mouse_y, room_width * 0.5 + 140, room_height - 82, room_width * 0.5 + 194, room_height - 30)) {
-        ib_book_goto_sheet(book, 5, true);
-    }
-    
-    // Moves five sheets back in the book.
-    if (point_in_rectangle(mouse_x, mouse_y, room_width * 0.5 - 194, room_height - 82, room_width * 0.5 - 140, room_height - 30)) {
-        ib_book_goto_sheet(book, -5, true);
-    }
+	ib_book_goto_sheet(book, -1, true);
+}
+else if (keyboard_check_pressed(vk_home)) {
+    // Moves to cover
+	ib_book_goto_sheet(book, 0);
+}
+else if (keyboard_check_pressed(vk_end)) {
+    // Moves to back
+	ib_book_goto_sheet(book, 100);
 }
 
+// Lets the user move the player
+if (keyboard_check(ord("W"))) {
+    // Moves the player forwards
+	//sprPlayer.y -= playerSpeed;
+	playerLocY -= playerSpeed;
+}
+else if (keyboard_check(ord("A"))) {
+    // Moves the player left
+	//sprPlayer.x += playerSpeed;
+	playerLocX -= playerSpeed;
+}
+if (keyboard_check(ord("S"))) {
+    // Moves the player right
+	//sprPlayer.y += playerSpeed;
+	playerLocY += playerSpeed;
+}
+else if (keyboard_check(ord("D"))) {
+    // Moves the player backwards
+	//sprPlayer.x -= playerSpeed;
+	playerLocX += playerSpeed;
+}

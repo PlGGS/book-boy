@@ -1,0 +1,3 @@
+/// @description Left
+
+x -= mySpeed;

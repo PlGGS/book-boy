@@ -119,6 +119,14 @@
             }
         },
         {
+            "Key": "1d5478c4-9b06-49e6-9b68-be7c8e4d83f6",
+            "Value": {
+                "id": "21998731-ca6c-4143-9228-f6d4764d1b72",
+                "resourcePath": "views\\1d5478c4-9b06-49e6-9b68-be7c8e4d83f6.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "21a5962f-0ef8-4ed2-a810-932f36d13473",
             "Value": {
                 "id": "0ae3fd82-1082-46be-9b42-0fc0472ebba8",
@@ -204,6 +212,14 @@
                 "id": "4fac1fbd-ff78-4c79-9299-7ce1b8b97d70",
                 "resourcePath": "views\\3dcfa4a0-9744-4295-8214-4586c59c268c.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "3ed5b4b8-e672-4517-9d45-e6e82d920018",
+            "Value": {
+                "id": "069f9413-9c1c-4469-86f9-4a9b95b79023",
+                "resourcePath": "scripts\\setSpriteCollisionMask\\setSpriteCollisionMask.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -631,6 +647,14 @@
             }
         },
         {
+            "Key": "c880c8ab-e862-49cc-b5cf-52d98cfcb718",
+            "Value": {
+                "id": "4f7926b3-759f-43cb-8757-f3dba674d225",
+                "resourcePath": "objects\\objBookBoy\\objBookBoy.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "c9693355-b5c9-47b8-aa83-8ef1a5b8215f",
             "Value": {
                 "id": "b8435e3a-d24b-4899-a11c-0c1c3c9c2a94",
@@ -708,6 +732,14 @@
                 "id": "3ffa062a-f0f5-4501-ac45-416b6299635a",
                 "resourcePath": "rooms\\roomMain\\roomMain.yy",
                 "resourceType": "GMRoom"
+            }
+        },
+        {
+            "Key": "d6b60917-203d-4dd1-86dd-ed2d78f4cac9",
+            "Value": {
+                "id": "c2f8adde-4159-4544-8c36-9975c812078f",
+                "resourcePath": "sprites\\sprBookBoy\\sprBookBoy.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -832,6 +864,8 @@
         }
     ],
     "script_order": [
+        "c3e58852-f966-407a-868d-c83f1d1b2bfb",
+        "3ed5b4b8-e672-4517-9d45-e6e82d920018",
         "db6861c8-7b8c-4a64-8c4f-364a2e184e86",
         "49c12685-fccf-43d2-af66-9f735aaa44e9",
         "560e23ae-07e6-4023-a6b7-fc3e4208ac7e",
@@ -851,7 +885,6 @@
         "0c4948d4-7dbe-4cb8-85db-98db306e2b32",
         "54f51027-211f-454e-8a89-753669722852",
         "2602ec45-c59e-44ab-b4ab-1c7a5ee9e831",
-        "c3e58852-f966-407a-868d-c83f1d1b2bfb",
         "676c64c6-fcc5-4b9e-80d3-9c77ccd3ed6c",
         "befb4d05-5834-41c1-a84b-b853d2d373ff",
         "7728d2f7-8548-4bbf-9994-6cd80ae19af0",

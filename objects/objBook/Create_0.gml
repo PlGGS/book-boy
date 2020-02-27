@@ -1,9 +1,11 @@
 /// @description Create main book and sheets
 
-surface = -1;
+pageSurfaceList = ds_list_create();
 
-var cover_width = sprite_get_width(spr_example_book_cover), cover_height = sprite_get_height(spr_example_book_cover),
-    sheet_width = sprite_get_width(spr_example_blank_sheet_front), sheet_height = sprite_get_height(spr_example_blank_sheet_front);
+cover_width = sprite_get_width(spr_example_book_cover);
+cover_height = sprite_get_height(spr_example_book_cover);
+sheet_width = sprite_get_width(spr_example_blank_sheet_front);
+sheet_height = sprite_get_height(spr_example_blank_sheet_front);
 
 // Creates a book.
 book_x = room_width * 0.5; book_y = room_height * 0.5 - 30;
@@ -20,6 +22,24 @@ ib_book_add_sheet(book, sprite_get_texture(spr_example_misc_sheet_front, 1), spr
 // Adds a sheet saying "Chapter 1: Jailbreak".
 ib_book_add_sheet(book, sprite_get_texture(spr_example_misc_sheet_front, 8), sprite_get_texture(spr_example_blank_sheet_back, 0), sheet_width, sheet_height,
                   sprite_get_uvs(spr_example_misc_sheet_front, 8), sprite_get_uvs(spr_example_blank_sheet_back, 0));
+
+//Chapter 1
+//Add pages for chapter 1
+srfTest = -1;
+shtTest = ib_book_add_sheet(book, -1, -1);
+sprPlayer = setSpriteCollisionMask(objBookBoy, sheet_width, sheet_height, 32);
+
+/*
+chapter1Sheets = ds_list_create();
+
+for (var i = 0; i < 2; i++) {
+	ds_list_add(pageSurfaceList, -1);
+	if (i > 0) {
+		ds_list_add(chapter1Sheets, ib_book_add_sheet(book, pageSurfaceList[| (i - 1)], pageSurfaceList[| i]));
+	}
+}
+*/
+
 
 // Creates a variable for a surface to contain our button example. Then a sheet is added to the book and its id is stored in sheet_buttons. This is similar to the way we create a surface
 // for the text sheets and store the sheet id there. After this, the button instances are created.
