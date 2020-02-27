@@ -1,0 +1,127 @@
+Converting GML script: ${project_dir}\scripts\ib_book_create\ib_book_create.gml
+Converted description /// @description  ib_book_create(x, y, [precision x], [precision y], [fade in speed], [fade out speed], [shadow color], [light source distance], [shadow smoothness], [gradient color], [inner wave factor], [outer wave factor], [wave dependence], [page flip smoothing], [dithering])/// @param x
+/// @param  y
+/// @param  [precision x]
+/// @param  [precision y]
+/// @param  [fade in speed]
+/// @param  [fade out speed]
+/// @param  [shadow color]
+/// @param  [light source distance]
+/// @param  [shadow smoothness]
+/// @param  [gradient color]
+/// @param  [inner wave factor]
+/// @param  [outer wave factor]
+/// @param  [wave dependence]
+/// @param  [page flip smoothing]
+/// @param  [dithering]
+
+Converting GML script: ${project_dir}\scripts\ib_book_destroy\ib_book_destroy.gml
+Converted description /// @description  ib_book_destroy(book instance id)/// @param book instance id
+
+Converting GML script: ${project_dir}\scripts\ib_book_draw\ib_book_draw.gml
+Converted description /// @description  ib_book_draw(book instance id, target width, target height)/// @param book instance id
+/// @param  target width
+/// @param  target height
+
+Converting GML script: ${project_dir}\scripts\ib_book_add_sheet\ib_book_add_sheet.gml
+Converted description /// @description  ib_book_add_sheet(book instance id, front texture, back texture, [width], [height], [front uvs], [back uvs], [sheet index], [thickness], [thickness precision], [stiffness], [transparent], [visibility type], [x origin])/// @param book instance id
+/// @param  front texture
+/// @param  back texture
+/// @param  [width]
+/// @param  [height]
+/// @param  [front uvs]
+/// @param  [back uvs]
+/// @param  [sheet index]
+/// @param  [thickness]
+/// @param  [thickness precision]
+/// @param  [stiffness]
+/// @param  [transparent]
+/// @param  [visibility type]
+/// @param  [x origin]
+
+Converting GML script: ${project_dir}\scripts\ib_book_get_sheet\ib_book_get_sheet.gml
+Converted description /// @description  ib_book_get_sheet(book instance id, sheet index)/// @param book instance id
+/// @param  sheet index
+
+Converting GML script: ${project_dir}\scripts\ib_book_set_transformation\ib_book_set_transformation.gml
+Converted description /// @description  ib_book_set_transformation(book instance id, x, y, x scale, y scale)/// @param book instance id
+/// @param  x
+/// @param  y
+/// @param  x scale
+/// @param  y scale
+
+Converting GML script: ${project_dir}\scripts\ib_book_goto_sheet\ib_book_goto_sheet.gml
+Converted description /// @description  ib_book_goto_sheet(book instance id, sheet index, [relative], [time], [sheet spacing], [speed reduction])/// @param book instance id
+/// @param  sheet index
+/// @param  [relative]
+/// @param  [time]
+/// @param  [sheet spacing]
+/// @param  [speed reduction]
+
+Converting GML script: ${project_dir}\scripts\ib_book_is_transitioning\ib_book_is_transitioning.gml
+Converted description /// @description  ib_book_is_transitioning(book instance id)/// @param book instance id
+
+Converting GML script: ${project_dir}\scripts\ib_book_get_left_sheet\ib_book_get_left_sheet.gml
+Converted description /// @description  ib_book_get_left_sheet(book instance id)/// @param book instance id
+
+Converting GML script: ${project_dir}\scripts\ib_book_get_right_sheet\ib_book_get_right_sheet.gml
+Converted description /// @description  ib_book_get_right_sheet(book instance id)/// @param book instance id
+
+Converting GML script: ${project_dir}\scripts\ib_sheet_position_curved_to_flat\ib_sheet_position_curved_to_flat.gml
+Converted description /// @description  ib_sheet_position_curved_to_flat(sheet instance id, x, y, target width, target height)/// @param sheet instance id
+/// @param  x
+/// @param  y
+/// @param  target width
+/// @param  target height
+
+Converting GML script: ${project_dir}\scripts\ib_sheet_position_flat_to_curved\ib_sheet_position_flat_to_curved.gml
+Converted description /// @description  ib_sheet_position_flat_to_curved(sheet instance id, x, y, target width, target height)/// @param sheet instance id
+/// @param  x
+/// @param  y
+/// @param  target width
+/// @param  target height
+
+Converting GML script: ${project_dir}\scripts\ib_sheet_destroy\ib_sheet_destroy.gml
+Converted description /// @description  ib_sheet_destroy(sheet instance id)/// @param sheet instance id
+
+Converting GML script: ${project_dir}\scripts\ib_sheet_set_texture\ib_sheet_set_texture.gml
+Converted description /// @description  ib_sheet_set_texture(sheet instance id, front texture, back texture, [width], [height], [front uvs], [back uvs], [origin x])/// @param sheet instance id
+/// @param  front texture
+/// @param  back texture
+/// @param  [width]
+/// @param  [height]
+/// @param  [front uvs]
+/// @param  [back uvs]
+/// @param  [origin x]
+
+Converting GML script: ${project_dir}\scripts\ib_sheet_is_visible\ib_sheet_is_visible.gml
+Converted description /// @description  ib_sheet_is_visible(sheet instance id)/// @param sheet instance id
+
+Converting GML script: ${project_dir}\scripts\ib_sheet_get_index\ib_sheet_get_index.gml
+Converted description /// @description  ib_sheet_get_index(sheet instance id)/// @param sheet instance id
+
+Converting GML script: ${project_dir}\scripts\ib_smoothstep\ib_smoothstep.gml
+Converted description /// @description  ib_smoothstep(t)/// @param t
+
+Converting GML script: ${project_dir}\scripts\example_set_surfaces\example_set_surfaces.gml
+Converted description /// @description  example_create_surfaces()
+
+!!! Font ft_example_sheet uses a font (Trajan Pro) not installed on this system - Font has NOT been regenerated
+GameMaker Studio 1 font texture has been backed up at ${project_dir}\fonts\ft_example_sheet\ft_example_sheet.gms1.png
+Added compatibility script 'd3d/d3d_end.gml'
+Added compatibility script 'd3d/d3d_set_culling.gml'
+Added compatibility script 'd3d/d3d_set_hidden.gml'
+Added compatibility script 'd3d/d3d_set_projection_ext.gml'
+Added compatibility script 'd3d/d3d_start.gml'
+Added compatibility script 'draw/draw_enable_alphablend.gml'
+Added compatibility script 'draw/draw_set_alpha_test.gml'
+Added compatibility script 'draw/draw_set_blend_mode.gml'
+Added compatibility script 'draw/draw_set_blend_mode_ext.gml'
+Added compatibility script 'draw/draw_set_color_write_enable.gml'
+Added compatibility script 'instance/instance_create.gml'
+Added compatibility script 'object/object_get_depth.gml'
+Added compatibility script 'texture/texture_set_interpolation.gml'
+Added compatibility script 'texture/texture_set_repeat_ext.gml'
+Added compatibility script 'd3d/__init_d3d.gml'
+Added compatibility script '__init_global.gml'
+Added compatibility script '__global_object_depths.gml'

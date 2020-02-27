@@ -1,0 +1,30 @@
+{
+    "id": "82404026-76b2-473f-8d94-d31aaf53a024",
+    "modelName": "GMFolder",
+    "mvc": "1.1",
+    "name": "82404026-76b2-473f-8d94-d31aaf53a024",
+    "children": [
+        "db6861c8-7b8c-4a64-8c4f-364a2e184e86",
+        "49c12685-fccf-43d2-af66-9f735aaa44e9",
+        "560e23ae-07e6-4023-a6b7-fc3e4208ac7e",
+        "642c5f47-746f-47ac-aa91-526ca3b38a64",
+        "981f41d2-3e7d-4194-8218-0f62e6e19ac3",
+        "e02d9fab-0cd2-45b1-baec-9a0fe0522166",
+        "0c6b344c-b742-43e3-9c1d-1a6d142d99d8",
+        "e2b8a3f9-9ad0-4859-b634-8c9be861d1d6",
+        "1a01bbf3-7ac5-486b-bace-5eab4186ffb6",
+        "367a77a0-a71a-406e-a172-66fa3de29385",
+        "8033158a-03b1-4d96-857f-703aa1f9ef8e",
+        "c2e116d7-d34f-408c-9a1c-0d378a3229a6",
+        "d198180f-f1f3-48f5-9fc8-b326e4b1d012",
+        "8ec7f3aa-4211-447c-a34c-a8c76e7bbeef",
+        "c6c5f6d8-f6c4-4d07-a5f7-065663ff9812",
+        "0e3c2ce8-805e-4cbf-b809-5381aae17278",
+        "0c4948d4-7dbe-4cb8-85db-98db306e2b32",
+        "54f51027-211f-454e-8a89-753669722852"
+    ],
+    "filterType": "GMScript",
+    "folderName": "Interactive Books",
+    "isDefaultView": false,
+    "localisedFolderName": ""
+}
