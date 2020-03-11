@@ -71,9 +71,37 @@ if (ib_sheet_is_visible(sheetCh1Pg2_3)) {
 		draw_enable_alphablend(true);
 	surface_reset_target();
 
-
-
 	surface_set_target(surfCh1Pg3);
+		// Draws a sheet to the surface. Alphablend is disabled so that the blank sheet sprite will replace all pixels in the surface. Then draws the buttons.
+		// xstart, ystart is the position entered when the button was created, and since this is the button position relative to the sheet we use it.
+		draw_enable_alphablend(false);
+			draw_sprite(spr_example_blank_sheet_back, 0, 0, 0);
+			draw_sprite(objBookBoy.sprite_index, objBookBoy.image_index, playerLocX, playerLocY);
+		draw_enable_alphablend(true);
+	surface_reset_target();
+}
+
+if (!surface_exists(surfCh1Pg4)) {
+	update = true;
+	surfCh1Pg4 = surface_create(sheet_width, sheet_height);
+}
+
+if (!surface_exists(surfCh1PgEnd)) {
+	update = true;
+	surfCh1PgEnd = surface_create(sheet_width, sheet_height);
+}
+
+if (ib_sheet_is_visible(sheetCh1Pg4_End)) {
+	surface_set_target(surfCh1Pg4);
+		// Draws a sheet to the surface. Alphablend is disabled so that the blank sheet sprite will replace all pixels in the surface. Then draws the buttons.
+		// xstart, ystart is the position entered when the button was created, and since this is the button position relative to the sheet we use it.
+		draw_enable_alphablend(false);
+			draw_sprite(spr_example_blank_sheet_front, 0, 0, 0);
+			draw_sprite(objBookBoy.sprite_index, objBookBoy.image_index, playerLocX - sheet_width, playerLocY);
+		draw_enable_alphablend(true);
+	surface_reset_target();
+
+	surface_set_target(surfCh1PgEnd);
 		// Draws a sheet to the surface. Alphablend is disabled so that the blank sheet sprite will replace all pixels in the surface. Then draws the buttons.
 		// xstart, ystart is the position entered when the button was created, and since this is the button position relative to the sheet we use it.
 		draw_enable_alphablend(false);
@@ -165,6 +193,9 @@ if (update) {
                   undefined, undefined);
 				  
 	ib_sheet_set_texture(sheetCh1Pg2_3, surface_get_texture(surfCh1Pg2), surface_get_texture(surfCh1Pg3), sheet_width, sheet_height,
+                  undefined, undefined);
+				  
+	ib_sheet_set_texture(sheetCh1Pg4_End, surface_get_texture(surfCh1Pg4), surface_get_texture(surfCh1PgEnd), sheet_width, sheet_height,
                   undefined, undefined);
 	
     // Sets the textures for the button sheet.

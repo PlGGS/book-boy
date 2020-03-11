@@ -1,49 +1,44 @@
-// Lets the user navigate the book.
-if (keyboard_check_pressed(vk_right)) {
-    // Moves one sheet ahead in the book.
-	/*
-	if (ib_sheet_is_visible(ch1sheets[array_length_1d(ch1sheets) - 1])) {
-		if (completedCh[1]) {
-			ib_book_goto_sheet(book, 1, true);	
+if ((ib_sheet_is_visible(sheetCh1PgTitle_1) && ib_sheet_is_visible(sheetCh1Pg2_3)) ||
+	 (ib_sheet_is_visible(sheetCh1Pg2_3) && ib_sheet_is_visible(sheetCh1Pg4_End))) {
+	//chapter 1 navigation
+	if (keyboard_check_pressed(vk_right)) {
+		if (ib_sheet_is_visible(sheetCh1Pg2_3) && ib_sheet_is_visible(sheetCh1Pg4_End)) {
+			if (completedCh[1]) {
+				//only progress if we've completed chapter 1
+				moveToNextPage();
+			}
+		}
+		else {
+			moveToNextPage();
 		}
 	}
-	else {
-		ib_book_goto_sheet(book, 1, true);
+	else if (keyboard_check_pressed(vk_left)) {
+	    // Moves one sheet back in the book.
+		moveToPrevPage();
 	}
-	*/
-	ib_book_goto_sheet(book, 1, true);
+		 
+	//chapter 1 movement
+	if (!ib_book_is_transitioning(book)) {
+		// Lets the user move the player
+		if (keyboard_check(ord("A"))) {
+		    // Moves the player left
+			//sprPlayer.x += playerSpeed;
+			playerLocX -= playerSpeed;
+		}
+		if (keyboard_check(ord("D"))) {
+		    // Moves the player backwards
+			//sprPlayer.x -= playerSpeed;
+			playerLocX += playerSpeed;
+		}
+	}
 }
-else if (keyboard_check_pressed(vk_left)) {
-    // Moves one sheet back in the book.
-	ib_book_goto_sheet(book, -1, true);
-}
-else if (keyboard_check_pressed(vk_home)) {
-    // Moves to cover
-	ib_book_goto_sheet(book, 0);
-}
-else if (keyboard_check_pressed(vk_end)) {
-    // Moves to back
-	ib_book_goto_sheet(book, 100);
-}
-
-// Lets the user move the player
-if (keyboard_check(ord("W"))) {
-    // Moves the player forwards
-	//sprPlayer.y -= playerSpeed;
-	playerLocY -= playerSpeed;
-}
-if (keyboard_check(ord("A"))) {
-    // Moves the player left
-	//sprPlayer.x += playerSpeed;
-	playerLocX -= playerSpeed;
-}
-if (keyboard_check(ord("S"))) {
-    // Moves the player right
-	//sprPlayer.y += playerSpeed;
-	playerLocY += playerSpeed;
-}
-if (keyboard_check(ord("D"))) {
-    // Moves the player backwards
-	//sprPlayer.x -= playerSpeed;
-	playerLocX += playerSpeed;
+else {
+	//intro navigation
+	if (keyboard_check_pressed(vk_right)) {
+		moveToNextPage();
+	}
+	else if (keyboard_check_pressed(vk_left)) {
+	    // Moves one sheet back in the book.
+		moveToPrevPage();
+	}
 }
