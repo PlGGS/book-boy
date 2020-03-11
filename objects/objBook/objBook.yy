@@ -95,6 +95,34 @@
             "value": "100",
             "varName": "playerLocY",
             "varType": 0
+        },
+        {
+            "id": "859f860e-75ae-4712-9ea5-87a0dcb53a33",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "200",
+            "varName": "enemyLocX",
+            "varType": 0
+        },
+        {
+            "id": "74dfb610-03ae-4ffc-a654-824ad2ded6cb",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "200",
+            "varName": "enemyLocY",
+            "varType": 0
         }
     ],
     "solid": false,

@@ -22,7 +22,7 @@ if (keyboard_check(ord("W"))) {
 	//sprPlayer.y -= playerSpeed;
 	playerLocY -= playerSpeed;
 }
-else if (keyboard_check(ord("A"))) {
+if (keyboard_check(ord("A"))) {
     // Moves the player left
 	//sprPlayer.x += playerSpeed;
 	playerLocX -= playerSpeed;
@@ -32,7 +32,7 @@ if (keyboard_check(ord("S"))) {
 	//sprPlayer.y += playerSpeed;
 	playerLocY += playerSpeed;
 }
-else if (keyboard_check(ord("D"))) {
+if (keyboard_check(ord("D"))) {
     // Moves the player backwards
 	//sprPlayer.x -= playerSpeed;
 	playerLocX += playerSpeed;

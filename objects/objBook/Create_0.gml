@@ -8,7 +8,8 @@ sheet_width = sprite_get_width(spr_example_blank_sheet_front);
 sheet_height = sprite_get_height(spr_example_blank_sheet_front);
 
 // Creates a book.
-book_x = room_width * 0.5; book_y = room_height * 0.5 - 30;
+book_x = room_width * 0.5;
+book_y = room_height * 0.5 - 30;
 book = ib_book_create(book_x, book_y, 41, 56);
 
 // Adds the front cover sheet to the book.
@@ -20,14 +21,16 @@ ib_book_add_sheet(book, sprite_get_texture(spr_example_misc_sheet_front, 1), spr
                   sprite_get_uvs(spr_example_misc_sheet_front, 1), sprite_get_uvs(spr_example_blank_sheet_back, 0));
 
 // Adds a sheet saying "Chapter 1: Jailbreak".
-ib_book_add_sheet(book, sprite_get_texture(spr_example_misc_sheet_front, 8), sprite_get_texture(spr_example_blank_sheet_back, 0), sheet_width, sheet_height,
-                  sprite_get_uvs(spr_example_misc_sheet_front, 8), sprite_get_uvs(spr_example_blank_sheet_back, 0));
+//ib_book_add_sheet(book, sprite_get_texture(spr_example_misc_sheet_front, 8), sprite_get_texture(spr_example_blank_sheet_back, 0), sheet_width, sheet_height,
+//                  sprite_get_uvs(spr_example_misc_sheet_front, 8), sprite_get_uvs(spr_example_blank_sheet_back, 0));
 
 //Chapter 1
 //Add pages for chapter 1
-srfTest = -1;
-shtTest = ib_book_add_sheet(book, -1, -1);
-sprPlayer = setSpriteCollisionMask(objBookBoy, sheet_width, sheet_height, 32);
+for (var i = 0; i < 3; i++) {
+	ch1surfs[i] = -1;
+	ch1sheets[i] = ib_book_add_sheet(book, sprite_get_texture(spr_example_blank_sheet_front, 0), sprite_get_texture(spr_example_blank_sheet_back, 0), sheet_width, sheet_height,
+                  sprite_get_uvs(spr_example_blank_sheet_front, 0), sprite_get_uvs(spr_example_blank_sheet_back, 0));
+}
 
 /*
 chapter1Sheets = ds_list_create();

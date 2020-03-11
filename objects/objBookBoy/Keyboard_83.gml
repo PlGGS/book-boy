@@ -1,3 +1,0 @@
-/// @description Down
-
-y += mySpeed;

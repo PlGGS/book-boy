@@ -1,3 +1,0 @@
-/// @description Right
-
-x += mySpeed;

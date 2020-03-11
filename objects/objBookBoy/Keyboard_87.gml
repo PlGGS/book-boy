@@ -1,3 +1,0 @@
-/// @description Up
-
-y -= mySpeed;
