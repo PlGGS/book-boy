@@ -1,18 +1,28 @@
 {
-    "id": "c880c8ab-e862-49cc-b5cf-52d98cfcb718",
+    "id": "02ef4530-399b-40ff-bb0f-6c4ef9ae9681",
     "modelName": "GMObject",
     "mvc": "1.0",
     "name": "objBookBoy",
     "eventList": [
         {
-            "id": "0f47ebaa-9731-41f4-b2a9-bccc7c1db4a5",
+            "id": "d28bf33e-53c5-4d34-b111-de6418726127",
             "modelName": "GMEvent",
             "mvc": "1.0",
             "IsDnD": false,
             "collisionObjectId": "00000000-0000-0000-0000-000000000000",
             "enumb": 0,
             "eventtype": 0,
-            "m_owner": "c880c8ab-e862-49cc-b5cf-52d98cfcb718"
+            "m_owner": "02ef4530-399b-40ff-bb0f-6c4ef9ae9681"
+        },
+        {
+            "id": "1d18b41f-1e7e-4cdd-a8ca-019105ad18a1",
+            "modelName": "GMEvent",
+            "mvc": "1.0",
+            "IsDnD": false,
+            "collisionObjectId": "00000000-0000-0000-0000-000000000000",
+            "enumb": 0,
+            "eventtype": 3,
+            "m_owner": "02ef4530-399b-40ff-bb0f-6c4ef9ae9681"
         }
     ],
     "maskSpriteId": "00000000-0000-0000-0000-000000000000",
@@ -28,12 +38,14 @@
     "physicsObject": false,
     "physicsRestitution": 0.1,
     "physicsSensor": false,
-    "physicsShape": 1,
-    "physicsShapePoints": null,
+    "physicsShape": 0,
+    "physicsShapePoints": [
+        
+    ],
     "physicsStartAwake": true,
     "properties": [
         {
-            "id": "913c969d-905d-4546-bf81-b27564807e68",
+            "id": "536df635-67ac-44f0-a855-29cc72be9306",
             "modelName": "GMObjectProperty",
             "mvc": "1.0",
             "listItems": null,
@@ -49,5 +61,5 @@
     ],
     "solid": false,
     "spriteId": "d6b60917-203d-4dd1-86dd-ed2d78f4cac9",
-    "visible": true
+    "visible": false
 }

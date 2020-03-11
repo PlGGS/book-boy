@@ -20,25 +20,65 @@ draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_font(ft_example_sheet);
 
-for (var i = 0; i < 3; i++) {
-	// Creates the chapter 1 surfaces if they don't exist:
-	if (!surface_exists(ch1surfs[i])) {
-	    update = true;
-	    ch1surfs[i] = surface_create(sheet_width, sheet_height);
-	}
-	
-	// Draws to the ch1 surfaces.
-	if (ib_sheet_is_visible(ch1sheets[i])) {
-	    surface_set_target(ch1surfs[i]);
-	        // Draws a sheet to the surface. Alphablend is disabled so that the blank sheet sprite will replace all pixels in the surface. Then draws the buttons.
-	        // xstart, ystart is the position entered when the button was created, and since this is the button position relative to the sheet we use it.
-	        draw_enable_alphablend(false);
-				draw_sprite(spr_example_blank_sheet_front, 0, 0, 0);
-				draw_sprite(sprBookBoy, 0, playerLocX, playerLocY);
-				draw_sprite(sprBadBookBoy, 0, enemyLocX, enemyLocY);
-	        draw_enable_alphablend(true);
-	    surface_reset_target();
-	}
+// Creates the chapter 1 surfaces if they don't exist:
+if (!surface_exists(surfCh1PgTitle)) {
+	update = true;
+	surfCh1PgTitle = surface_create(sheet_width, sheet_height);
+}
+
+if (!surface_exists(surfCh1Pg1)) {
+	update = true;
+	surfCh1Pg1 = surface_create(sheet_width, sheet_height);
+}
+
+// Draws to the ch1 surfaces.
+if (ib_sheet_is_visible(sheetCh1PgTitle_1)) {
+	surface_set_target(surfCh1PgTitle);
+		// Draws a sheet to the surface. Alphablend is disabled so that the blank sheet sprite will replace all pixels in the surface. Then draws the buttons.
+		// xstart, ystart is the position entered when the button was created, and since this is the button position relative to the sheet we use it.
+		draw_enable_alphablend(false);
+			draw_sprite(spr_misc_sheet_front, 0, 0, 0);
+		draw_enable_alphablend(true);
+	surface_reset_target();
+
+	surface_set_target(surfCh1Pg1);
+		// Draws a sheet to the surface. Alphablend is disabled so that the blank sheet sprite will replace all pixels in the surface. Then draws the buttons.
+		// xstart, ystart is the position entered when the button was created, and since this is the button position relative to the sheet we use it.
+		draw_enable_alphablend(false);
+			draw_sprite(spr_example_blank_sheet_back, 0, 0, 0);
+			with (objBookBoy) draw_sprite(sprite_index, image_index, objBook.playerLocX, objBook.playerLocY);
+		draw_enable_alphablend(true);
+	surface_reset_target();
+}
+
+if (!surface_exists(surfCh1Pg2)) {
+	update = true;
+	surfCh1Pg2 = surface_create(sheet_width, sheet_height);
+}
+
+if (!surface_exists(surfCh1Pg3)) {
+	update = true;
+	surfCh1Pg3 = surface_create(sheet_width, sheet_height);
+}
+
+if (ib_sheet_is_visible(sheetCh1Pg2_3)) {
+	surface_set_target(surfCh1Pg2);
+		// Draws a sheet to the surface. Alphablend is disabled so that the blank sheet sprite will replace all pixels in the surface. Then draws the buttons.
+		// xstart, ystart is the position entered when the button was created, and since this is the button position relative to the sheet we use it.
+		draw_enable_alphablend(false);
+			draw_sprite(spr_example_blank_sheet_front, 0, 0, 0);
+		draw_enable_alphablend(true);
+	surface_reset_target();
+
+
+
+	surface_set_target(surfCh1Pg3);
+		// Draws a sheet to the surface. Alphablend is disabled so that the blank sheet sprite will replace all pixels in the surface. Then draws the buttons.
+		// xstart, ystart is the position entered when the button was created, and since this is the button position relative to the sheet we use it.
+		draw_enable_alphablend(false);
+			draw_sprite(spr_example_blank_sheet_back, 0, 0, 0);
+		draw_enable_alphablend(true);
+	surface_reset_target();
 }
 
 /*
@@ -90,7 +130,6 @@ if (ib_sheet_is_visible(sheet_buttons)) {
         draw_enable_alphablend(false);
             draw_sprite(spr_example_misc_sheet_front, 7, 0, 0);
 			with (objBookButton) draw_sprite(sprite_index, image_index, xstart, ystart);
-			draw_sprite(sprBookBoy, 0, playerLocX, playerLocY);
 		draw_enable_alphablend(true);
     surface_reset_target();
 }
@@ -114,7 +153,6 @@ if (ib_sheet_is_visible(sheet_input_field)) {
         // Draws a sheet to the surface. Alphablend is disabled so that the blank sheet sprite will replace all pixels in the surface.
         draw_enable_alphablend(false);
             draw_sprite(spr_example_misc_sheet_front, 10, 0, 0);
-			draw_sprite(sprBookBoy, 0, playerLocX, playerLocY);
         draw_enable_alphablend(true);
     surface_reset_target();
 }
@@ -122,10 +160,11 @@ if (ib_sheet_is_visible(sheet_input_field)) {
 // If a surface was newly created, update is true, and what's below is executed.    
 if (update) {
 	// Sets the textures for chapter 1 sheets.
-	for (var i = 0; i < 3; i++) {
-		ib_sheet_set_texture(ch1sheets[i], surface_get_texture(ch1surfs[i]), sprite_get_texture(spr_example_blank_sheet_back, 0),
-                              undefined, undefined, undefined, sprite_get_uvs(spr_example_blank_sheet_back, 0));
-	}
+	ib_sheet_set_texture(sheetCh1PgTitle_1, surface_get_texture(surfCh1PgTitle), surface_get_texture(surfCh1Pg1), sheet_width, sheet_height,
+                  undefined, undefined);
+				  
+	ib_sheet_set_texture(sheetCh1Pg2_3, surface_get_texture(surfCh1Pg2), surface_get_texture(surfCh1Pg3), sheet_width, sheet_height,
+                  undefined, undefined);
 	
     // Sets the textures for the button sheet.
     ib_sheet_set_texture(sheet_buttons, surface_get_texture(sf_buttons), sprite_get_texture(spr_example_blank_sheet_back, 0),

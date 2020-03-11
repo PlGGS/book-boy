@@ -12,6 +12,10 @@ book_x = room_width * 0.5;
 book_y = room_height * 0.5 - 30;
 book = ib_book_create(book_x, book_y, 41, 56);
 
+for (var i = 1; i < 2; i++) {
+	completedCh[i] = false;
+}
+
 // Adds the front cover sheet to the book.
 ib_book_add_sheet(book, sprite_get_texture(spr_example_book_cover, 0), sprite_get_texture(spr_example_book_cover, 1), cover_width, cover_height,
                   sprite_get_uvs(spr_example_book_cover, 0), sprite_get_uvs(spr_example_book_cover, 1), undefined, 10, undefined, 1, true, 2, 12);
@@ -20,29 +24,20 @@ ib_book_add_sheet(book, sprite_get_texture(spr_example_book_cover, 0), sprite_ge
 ib_book_add_sheet(book, sprite_get_texture(spr_example_misc_sheet_front, 1), sprite_get_texture(spr_example_blank_sheet_back, 0), sheet_width, sheet_height,
                   sprite_get_uvs(spr_example_misc_sheet_front, 1), sprite_get_uvs(spr_example_blank_sheet_back, 0));
 
-// Adds a sheet saying "Chapter 1: Jailbreak".
-//ib_book_add_sheet(book, sprite_get_texture(spr_example_misc_sheet_front, 8), sprite_get_texture(spr_example_blank_sheet_back, 0), sheet_width, sheet_height,
-//                  sprite_get_uvs(spr_example_misc_sheet_front, 8), sprite_get_uvs(spr_example_blank_sheet_back, 0));
-
 //Chapter 1
-//Add pages for chapter 1
-for (var i = 0; i < 3; i++) {
-	ch1surfs[i] = -1;
-	ch1sheets[i] = ib_book_add_sheet(book, sprite_get_texture(spr_example_blank_sheet_front, 0), sprite_get_texture(spr_example_blank_sheet_back, 0), sheet_width, sheet_height,
+//Add both surfaces and sheet for chapter 1 sheet 1
+surfCh1PgTitle = -1;
+surfCh1Pg1 = -1;
+surfCh1Pg2 = -1;
+surfCh1Pg3 = -1;
+// Adds a sheet saying "Chapter 1: Jailbreak".
+sheetCh1PgTitle_1 = ib_book_add_sheet(book, sprite_get_texture(spr_misc_sheet_front, 0), sprite_get_texture(spr_example_blank_sheet_back, 0), sheet_width, sheet_height,
+                  sprite_get_uvs(spr_misc_sheet_front, 0), sprite_get_uvs(spr_example_blank_sheet_back, 0));
+
+sheetCh1Pg2_3 = ib_book_add_sheet(book, sprite_get_texture(spr_example_blank_sheet_front, 0), sprite_get_texture(spr_example_blank_sheet_back, 0), sheet_width, sheet_height,
                   sprite_get_uvs(spr_example_blank_sheet_front, 0), sprite_get_uvs(spr_example_blank_sheet_back, 0));
-}
-
-/*
-chapter1Sheets = ds_list_create();
-
-for (var i = 0; i < 2; i++) {
-	ds_list_add(pageSurfaceList, -1);
-	if (i > 0) {
-		ds_list_add(chapter1Sheets, ib_book_add_sheet(book, pageSurfaceList[| (i - 1)], pageSurfaceList[| i]));
-	}
-}
-*/
-
+//create book boy
+instance_create(50, 112, objBookBoy);
 
 // Creates a variable for a surface to contain our button example. Then a sheet is added to the book and its id is stored in sheet_buttons. This is similar to the way we create a surface
 // for the text sheets and store the sheet id there. After this, the button instances are created.

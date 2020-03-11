@@ -43,7 +43,22 @@
         
     ],
     "physicsStartAwake": true,
-    "properties": null,
+    "properties": [
+        {
+            "id": "21d16b40-bbd2-4989-a72e-2633f979c5c5",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "5",
+            "varName": "mySpeed",
+            "varType": 0
+        }
+    ],
     "solid": false,
     "spriteId": "23c77667-c82c-4912-8a1a-8bb5012b2285",
     "visible": false

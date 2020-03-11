@@ -1,6 +1,16 @@
 // Lets the user navigate the book.
 if (keyboard_check_pressed(vk_right)) {
     // Moves one sheet ahead in the book.
+	/*
+	if (ib_sheet_is_visible(ch1sheets[array_length_1d(ch1sheets) - 1])) {
+		if (completedCh[1]) {
+			ib_book_goto_sheet(book, 1, true);	
+		}
+	}
+	else {
+		ib_book_goto_sheet(book, 1, true);
+	}
+	*/
 	ib_book_goto_sheet(book, 1, true);
 }
 else if (keyboard_check_pressed(vk_left)) {

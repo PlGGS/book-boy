@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "02ef4530-399b-40ff-bb0f-6c4ef9ae9681",
+            "Value": {
+                "id": "2bbe8e9a-4bae-4ca2-9f44-ee942307c1d0",
+                "resourcePath": "objects\\objBookBoy\\objBookBoy.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "09c99d64-bccf-4e04-9461-6e2e70662001",
             "Value": {
                 "id": "b8e10088-ca31-4914-8ad0-d4268e0b231a",
@@ -215,14 +223,6 @@
             }
         },
         {
-            "Key": "3b27b35d-a0bf-4e96-a9e8-1733a55c6b46",
-            "Value": {
-                "id": "9b1df028-79b8-40b5-aa29-817618debc58",
-                "resourcePath": "objects\\objBadBookBoy\\objBadBookBoy.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "3dcfa4a0-9744-4295-8214-4586c59c268c",
             "Value": {
                 "id": "4fac1fbd-ff78-4c79-9299-7ce1b8b97d70",
@@ -324,6 +324,14 @@
                 "id": "21d53142-04ca-40fe-8b94-333cee33397c",
                 "resourcePath": "views\\5f2d7141-b52e-447f-ae71-baedd586c606.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "5fdf408c-6c15-406b-84c9-728975094708",
+            "Value": {
+                "id": "9900752c-be34-4377-9dca-9324954bba2e",
+                "resourcePath": "sprites\\spr_misc_sheet_back\\spr_misc_sheet_back.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -671,14 +679,6 @@
             }
         },
         {
-            "Key": "c880c8ab-e862-49cc-b5cf-52d98cfcb718",
-            "Value": {
-                "id": "4f7926b3-759f-43cb-8757-f3dba674d225",
-                "resourcePath": "objects\\objBookBoy\\objBookBoy.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "c9693355-b5c9-47b8-aa83-8ef1a5b8215f",
             "Value": {
                 "id": "b8435e3a-d24b-4899-a11c-0c1c3c9c2a94",
@@ -836,6 +836,14 @@
                 "id": "67066f01-50b3-4cdf-809a-ff7282b7558b",
                 "resourcePath": "scripts\\ib_book_goto_sheet\\ib_book_goto_sheet.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e988fa9a-a784-47f0-a42d-bc2a93d9295c",
+            "Value": {
+                "id": "a46e876c-b783-4819-a66e-2fc43ec2db5e",
+                "resourcePath": "sprites\\spr_misc_sheet_front\\spr_misc_sheet_front.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
