@@ -46,7 +46,7 @@ if (ib_sheet_is_visible(sheetCh1PgTitle_1)) {
 		// xstart, ystart is the position entered when the button was created, and since this is the button position relative to the sheet we use it.
 		draw_enable_alphablend(false);
 			draw_sprite(spr_example_blank_sheet_back, 0, 0, 0);
-			with (objBookBoy) draw_sprite(sprite_index, image_index, objBook.playerLocX, objBook.playerLocY);
+			draw_sprite(objBookBoy.sprite_index, objBookBoy.image_index, playerLocX, playerLocY);
 		draw_enable_alphablend(true);
 	surface_reset_target();
 }
@@ -67,6 +67,7 @@ if (ib_sheet_is_visible(sheetCh1Pg2_3)) {
 		// xstart, ystart is the position entered when the button was created, and since this is the button position relative to the sheet we use it.
 		draw_enable_alphablend(false);
 			draw_sprite(spr_example_blank_sheet_front, 0, 0, 0);
+			draw_sprite(objBookBoy.sprite_index, objBookBoy.image_index, playerLocX - sheet_width, playerLocY);
 		draw_enable_alphablend(true);
 	surface_reset_target();
 
