@@ -127,6 +127,36 @@ if (ib_sheet_is_visible(sheetCh1Pg4_End)) {
 	surface_reset_target();
 }
 
+// Creates the chapter 2 surfaces if they don't exist:
+if (!surface_exists(surfCh2PgTitle)) {
+	update = true;
+	surfCh2PgTitle = surface_create(sheet_width, sheet_height);
+}
+
+if (!surface_exists(surfCh2Pg1)) {
+	update = true;
+	surfCh2Pg1 = surface_create(sheet_width, sheet_height);
+}
+
+// Draws to the ch2 surfaces.
+if (ib_sheet_is_visible(sheetCh2PgTitle_1)) {
+	surface_set_target(surfCh2PgTitle);
+		// Draws a sheet to the surface. Alphablend is disabled so that the blank sheet sprite will replace all pixels in the surface. Then draws the buttons.
+		// xstart, ystart is the position entered when the button was created, and since this is the button position relative to the sheet we use it.
+		draw_enable_alphablend(false);
+			draw_sprite(spr_misc_sheet_front, 1, 0, 0);
+		draw_enable_alphablend(true);
+	surface_reset_target();
+
+	surface_set_target(surfCh2Pg1);
+		// Draws a sheet to the surface. Alphablend is disabled so that the blank sheet sprite will replace all pixels in the surface. Then draws the buttons.
+		// xstart, ystart is the position entered when the button was created, and since this is the button position relative to the sheet we use it.
+		draw_enable_alphablend(false);
+			draw_sprite(spr_example_blank_sheet_back, 0, 0, 0);
+		draw_enable_alphablend(true);
+	surface_reset_target();
+}
+
 /*
 if (!surface_exists(chapter1Sheets[| 0].texture_front)) {
     update = true;
@@ -205,7 +235,7 @@ if (ib_sheet_is_visible(sheet_input_field)) {
 
 // If a surface was newly created, update is true, and what's below is executed.    
 if (update) {
-	// Sets the textures for chapter 1 sheets.
+	// Sets the textures for chapter 1 sheets
 	ib_sheet_set_texture(sheetCh1PgTitle_1, surface_get_texture(surfCh1PgTitle), surface_get_texture(surfCh1Pg1), sheet_width, sheet_height,
                   undefined, undefined);
 				  
@@ -213,6 +243,10 @@ if (update) {
                   undefined, undefined);
 				  
 	ib_sheet_set_texture(sheetCh1Pg4_End, surface_get_texture(surfCh1Pg4), surface_get_texture(surfCh1PgEnd), sheet_width, sheet_height,
+                  undefined, undefined);
+				  
+	// Sets the textures for chapter 1 sheets
+	ib_sheet_set_texture(sheetCh2PgTitle_1, surface_get_texture(surfCh2PgTitle), surface_get_texture(surfCh2Pg1), sheet_width, sheet_height,
                   undefined, undefined);
 	
     // Sets the textures for the button sheet.

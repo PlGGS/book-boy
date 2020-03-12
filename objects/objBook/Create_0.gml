@@ -26,7 +26,7 @@ sheetIntro = ib_book_add_sheet(book, sprite_get_texture(spr_example_misc_sheet_f
                   sprite_get_uvs(spr_example_misc_sheet_front, 1), sprite_get_uvs(spr_example_blank_sheet_back, 0));
 
 //Chapter 1
-//Add both surfaces and sheet for chapter 1 sheet 1
+//Add both surfaces and sheets for chapter 1
 surfCh1PgTitle = -1;
 surfCh1Pg1 = -1;
 surfCh1Pg2 = -1;
@@ -47,6 +47,14 @@ instance_create(50, 112, objBookBoy);
 instance_create(50, 112, objBookBlock);
 instance_create(50, 112, objKey);
 instance_create(50, 112, objDoor);
+
+//Chapter 2
+//Add both surfaces and sheets for chapter 2
+surfCh2PgTitle = -1;
+surfCh2Pg1 = -1;
+// Adds a sheet saying "Chapter 2: Coming Soon (Maybe)"
+sheetCh2PgTitle_1 = ib_book_add_sheet(book, sprite_get_texture(spr_misc_sheet_front, 0), sprite_get_texture(spr_misc_sheet_back, 0), sheet_width, sheet_height,
+                  sprite_get_uvs(spr_misc_sheet_front, 0), sprite_get_uvs(spr_misc_sheet_back, 0));
 
 // Creates a variable for a surface to contain our button example. Then a sheet is added to the book and its id is stored in sheet_buttons. This is similar to the way we create a surface
 // for the text sheets and store the sheet id there. After this, the button instances are created.
