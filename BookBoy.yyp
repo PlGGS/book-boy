@@ -239,6 +239,14 @@
             }
         },
         {
+            "Key": "3dd92834-37e3-4f56-9ed3-cf3016d4ace7",
+            "Value": {
+                "id": "73cf6a51-88d3-4176-b3c3-495b568dff40",
+                "resourcePath": "sprites\\spr_my_book_cover\\spr_my_book_cover.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "3ed5b4b8-e672-4517-9d45-e6e82d920018",
             "Value": {
                 "id": "069f9413-9c1c-4469-86f9-4a9b95b79023",
