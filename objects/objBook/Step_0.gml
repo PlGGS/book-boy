@@ -20,7 +20,7 @@ if ((ib_sheet_is_visible(sheetCh1PgTitle_1) && ib_sheet_is_visible(sheetCh1Pg2_3
 	
 	//chapter 1 movement
 	if (!ib_book_is_transitioning(book)) {
-		// Lets the user move the player
+		// Keeps player in bounds
 		if (playerLocX > ((sheet_width * 2) - (sprite_get_width(sprBookBoy) / 2))) {
 			playerLocX = ((sheet_width * 2) - (sprite_get_width(sprBookBoy) / 2)) - 1;
 		}
@@ -29,9 +29,12 @@ if ((ib_sheet_is_visible(sheetCh1PgTitle_1) && ib_sheet_is_visible(sheetCh1Pg2_3
 		}
 		else {
 			if (ib_sheet_is_visible(sheetCh1PgTitle_1) && ib_sheet_is_visible(sheetCh1Pg2_3)) {
-				show_debug_message(string(playerLocX));
+				//check if get key
+				if (playerLocX > 430 && playerLocX < 450) {
+					hasKey = true;
+				}
+				
 				if (keyboard_check(ord("A"))) {
-					
 					if (playerLocX + (objBookBoy.sprite_width / 2) < 140 ||
 						playerLocX > 140 && playerLocX - playerSpeed > 140) {
 						// Moves the player left
@@ -47,6 +50,13 @@ if ((ib_sheet_is_visible(sheetCh1PgTitle_1) && ib_sheet_is_visible(sheetCh1Pg2_3
 				}
 			}
 			else {
+				//check if get to exit with key
+				if (playerLocX > 660 && playerLocX < 680) {
+					if (hasKey) {
+						completedCh[1] = true;
+					}
+				}
+				
 				if (keyboard_check(ord("A"))) {
 					// Moves the player left
 					playerLocX -= playerSpeed;
@@ -56,8 +66,8 @@ if ((ib_sheet_is_visible(sheetCh1PgTitle_1) && ib_sheet_is_visible(sheetCh1Pg2_3
 					playerLocX += playerSpeed;
 				}
 			}
-			
 		}
+		show_debug_message(string(playerLocX));
 	}
 }
 //intro

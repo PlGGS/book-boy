@@ -15,12 +15,13 @@ book = ib_book_create(book_x, book_y, 41, 56);
 for (var i = 1; i < 2; i++) {
 	completedCh[i] = false;
 }
+hasKey = false;
 
 // Adds the front cover sheet to the book.
 sheetCover = ib_book_add_sheet(book, sprite_get_texture(spr_example_book_cover, 0), sprite_get_texture(spr_example_book_cover, 1), cover_width, cover_height,
                   sprite_get_uvs(spr_example_book_cover, 0), sprite_get_uvs(spr_example_book_cover, 1), undefined, 10, undefined, 1, true, 2, 12);
 
-// Adds a sheet saying "Example book by Mytino".
+// Adds the intro sheet
 sheetIntro = ib_book_add_sheet(book, sprite_get_texture(spr_example_misc_sheet_front, 1), sprite_get_texture(spr_example_blank_sheet_back, 0), sheet_width, sheet_height,
                   sprite_get_uvs(spr_example_misc_sheet_front, 1), sprite_get_uvs(spr_example_blank_sheet_back, 0));
 
@@ -44,6 +45,8 @@ sheetCh1Pg4_End = ib_book_add_sheet(book, sprite_get_texture(spr_example_blank_s
 //create objects
 instance_create(50, 112, objBookBoy);
 instance_create(50, 112, objBookBlock);
+instance_create(50, 112, objKey);
+instance_create(50, 112, objDoor);
 
 // Creates a variable for a surface to contain our button example. Then a sheet is added to the book and its id is stored in sheet_buttons. This is similar to the way we create a surface
 // for the text sheets and store the sheet id there. After this, the button instances are created.
