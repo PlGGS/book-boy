@@ -503,6 +503,14 @@
             }
         },
         {
+            "Key": "885d0f89-4b61-4a4a-989f-453956394580",
+            "Value": {
+                "id": "e05961ad-909d-4bf6-a3a1-5159f003b5b3",
+                "resourcePath": "sounds\\AtSunriseByProudMusicLibrary\\AtSunriseByProudMusicLibrary.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "8e68851e-8b6a-42da-ab08-3d0bcf36e481",
             "Value": {
                 "id": "4f235779-130a-4c95-833b-8fa2d2cbd631",

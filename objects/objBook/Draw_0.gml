@@ -192,47 +192,6 @@ if (ib_sheet_is_visible(chapter1Sheets[| 0])) {
 }
 */
 
-// Creates the button surface if it doesn't exist:
-if (!surface_exists(sf_buttons)) {
-    update = true;
-    sf_buttons = surface_create(sheet_width, sheet_height);
-}
-
-// Draws to the button surface.
-if (ib_sheet_is_visible(sheet_buttons)) {
-    surface_set_target(sf_buttons);
-        // Draws a sheet to the surface. Alphablend is disabled so that the blank sheet sprite will replace all pixels in the surface. Then draws the buttons.
-        // xstart, ystart is the position entered when the button was created, and since this is the button position relative to the sheet we use it.
-        draw_enable_alphablend(false);
-            draw_sprite(spr_example_misc_sheet_front, 7, 0, 0);
-			with (objBookButton) draw_sprite(sprite_index, image_index, xstart, ystart);
-		draw_enable_alphablend(true);
-    surface_reset_target();
-}
-
-// Creates the text input field surface if it doesn't exist:
-if (!surface_exists(sf_input_field)) {
-    update = true;
-    sf_input_field = surface_create(sheet_width, sheet_height);
-}
-
-// Draws to the text input field surface if that sheet is currently visible to the player.
-if (ib_sheet_is_visible(sheet_input_field)) {
-    surface_set_target(sf_input_field);
-        // Draws text to the surface. We disable the alpha channel to avoid changing the opacity of the surface.
-        draw_set_color_write_enable(true, true, true, false);
-            draw_set_color(c_black);
-            keyboard_string = string_copy(keyboard_string, 1, 270);
-            draw_set_alpha(0.5); draw_text_ext(70, 165, string_hash_to_newline(keyboard_string), -1, sheet_width - 145); draw_set_alpha(1);
-        draw_set_color_write_enable(true, true, true, true);
-        
-        // Draws a sheet to the surface. Alphablend is disabled so that the blank sheet sprite will replace all pixels in the surface.
-        draw_enable_alphablend(false);
-            draw_sprite(spr_example_misc_sheet_front, 10, 0, 0);
-        draw_enable_alphablend(true);
-    surface_reset_target();
-}
-
 // If a surface was newly created, update is true, and what's below is executed.    
 if (update) {
 	// Sets the textures for chapter 1 sheets
@@ -245,22 +204,13 @@ if (update) {
 	ib_sheet_set_texture(sheetCh1Pg4_End, surface_get_texture(surfCh1Pg4), surface_get_texture(surfCh1PgEnd), sheet_width, sheet_height,
                   undefined, undefined);
 				  
-	// Sets the textures for chapter 1 sheets
+	// Sets the textures for chapter 2 sheets
 	ib_sheet_set_texture(sheetCh2PgTitle_1, surface_get_texture(surfCh2PgTitle), surface_get_texture(surfCh2Pg1), sheet_width, sheet_height,
                   undefined, undefined);
-	
-    // Sets the textures for the button sheet.
-    ib_sheet_set_texture(sheet_buttons, surface_get_texture(sf_buttons), sprite_get_texture(spr_example_blank_sheet_back, 0),
-                              undefined, undefined, undefined, sprite_get_uvs(spr_example_blank_sheet_back, 0));
-                              
-    // Sets the textures for the text input field sheet.
-    ib_sheet_set_texture(sheet_input_field, surface_get_texture(sf_input_field), sprite_get_texture(spr_example_blank_sheet_back, 0),
-                              undefined, undefined, undefined, sprite_get_uvs(spr_example_blank_sheet_back, 0));
 }
-
 
 // Draws the book.
 ib_book_draw(book, room_width, room_height);
 
 // Draws a gradient near the edge of the window.
-//draw_sprite_stretched(spr_example_gradient, 0, 0, 0, room_width, room_height);
+draw_sprite_stretched(spr_example_gradient, 0, 0, 0, room_width, room_height);

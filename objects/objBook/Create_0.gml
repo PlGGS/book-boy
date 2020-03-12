@@ -56,27 +56,10 @@ surfCh2Pg1 = -1;
 sheetCh2PgTitle_1 = ib_book_add_sheet(book, sprite_get_texture(spr_misc_sheet_front, 0), sprite_get_texture(spr_misc_sheet_back, 0), sheet_width, sheet_height,
                   sprite_get_uvs(spr_misc_sheet_front, 0), sprite_get_uvs(spr_misc_sheet_back, 0));
 
-// Creates a variable for a surface to contain our button example. Then a sheet is added to the book and its id is stored in sheet_buttons. This is similar to the way we create a surface
-// for the text sheets and store the sheet id there. After this, the button instances are created.
-sf_buttons = -1;
-sheet_buttons = ib_book_add_sheet(book, -1, -1);
-(instance_create(0, 0, objBookButton)).button_id = 0;
-(instance_create(50, 308, objBookButton)).button_id = 1;
-
-// Creates a variable for a surface to contain our text input field example. Then a sheet is added to the book and its id is stored in sheet_input_field.
-sf_input_field = -1;
-sheet_input_field = ib_book_add_sheet(book, -1, -1);
-
-// Adds a blank sheet.
-/*
-ib_book_add_sheet(book, sprite_get_texture(spr_example_blank_sheet_front, 0), sprite_get_texture(spr_example_blank_sheet_back, 0), sheet_width, sheet_height,
-                  sprite_get_uvs(spr_example_blank_sheet_front, 0), sprite_get_uvs(spr_example_blank_sheet_back, 0));
-*/
-
-// Adds the back cover sheet to the book.
+// Adds the back cover sheet to the book
 ib_book_add_sheet(book, sprite_get_texture(spr_example_book_cover, 2), sprite_get_texture(spr_example_book_cover, 3), cover_width, cover_height,
                   sprite_get_uvs(spr_example_book_cover, 2), sprite_get_uvs(spr_example_book_cover, 3), undefined, 10, undefined, 1, true, 2, 12);
 
-// Enables inerpolation and vsync.
+// Enables inerpolation and vsync
 texture_set_interpolation(true);
 display_reset(0, true);
