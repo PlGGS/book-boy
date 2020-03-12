@@ -45,6 +45,7 @@ sheetCh1Pg4_End = ib_book_add_sheet(book, sprite_get_texture(spr_example_blank_s
 //create objects
 instance_create(50, 112, objBookBoy);
 instance_create(50, 112, objBookBlock);
+instance_create(50, 112, objWindow);
 instance_create(50, 112, objKey);
 instance_create(50, 112, objDoor);
 

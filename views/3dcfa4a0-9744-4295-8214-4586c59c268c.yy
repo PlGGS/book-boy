@@ -12,7 +12,8 @@
         "c273e333-99ef-4293-8400-1e021b087e5b",
         "52ba73a9-7cce-461e-8c33-ae7fce542202",
         "875ccd8b-14fd-4fe2-a248-3a876c1b240b",
-        "c62a1f8d-4dd5-453d-ad46-1ffddd1f4b3c"
+        "c62a1f8d-4dd5-453d-ad46-1ffddd1f4b3c",
+        "c2b638c0-aaa3-4d92-8652-3cd0288df943"
     ],
     "filterType": "GMSprite",
     "folderName": "BookBoy",
