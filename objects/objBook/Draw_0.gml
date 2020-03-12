@@ -13,7 +13,6 @@ draw_sprite_ext(sprArrow, 1, room_width * 0.5 - 140, room_height - 82, -1, 1, 0,
 /// @description  setSurfaces()
 //
 // Makes sure the surfaces used by the book exist and are assigned as textures for the sheets that use them.
-
 var index, update = false;
 
 draw_set_halign(fa_left);

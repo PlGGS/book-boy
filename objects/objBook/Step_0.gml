@@ -30,8 +30,9 @@ if ((ib_sheet_is_visible(sheetCh1PgTitle_1) && ib_sheet_is_visible(sheetCh1Pg2_3
 		else {
 			if (ib_sheet_is_visible(sheetCh1PgTitle_1) && ib_sheet_is_visible(sheetCh1Pg2_3)) {
 				//check if get key
-				if (playerLocX > 430 && playerLocX < 450) {
+				if (hasKey == false && playerLocX > 430 && playerLocX < 450) {
 					hasKey = true;
+					audio_play_sound(sndGet, 1, false);
 				}
 				
 				if (keyboard_check(ord("A"))) {
@@ -51,9 +52,10 @@ if ((ib_sheet_is_visible(sheetCh1PgTitle_1) && ib_sheet_is_visible(sheetCh1Pg2_3
 			}
 			else {
 				//check if get to exit with key
-				if (playerLocX > 660 && playerLocX < 680) {
+				if (completedCh[1] == false && playerLocX > 660 && playerLocX < 680) {
 					if (hasKey) {
 						completedCh[1] = true;
+						audio_play_sound(sndWin, 1, false);
 					}
 				}
 				
@@ -67,7 +69,6 @@ if ((ib_sheet_is_visible(sheetCh1PgTitle_1) && ib_sheet_is_visible(sheetCh1Pg2_3
 				}
 			}
 		}
-		show_debug_message(string(playerLocX));
 	}
 }
 //intro

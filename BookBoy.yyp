@@ -855,6 +855,14 @@
             }
         },
         {
+            "Key": "db27a351-1131-4a24-a871-039ba7468427",
+            "Value": {
+                "id": "197fc9b6-05f3-459d-b542-4b05fb210e01",
+                "resourcePath": "sounds\\sndWin\\sndWin.yy",
+                "resourceType": "GMSound"
+            }
+        },
+        {
             "Key": "db6861c8-7b8c-4a64-8c4f-364a2e184e86",
             "Value": {
                 "id": "2cc472bf-2bdf-4a07-89d7-1bfed4a519a2",
@@ -956,6 +964,14 @@
                 "id": "64fe3f7e-f517-4172-9d8c-e44350b133d4",
                 "resourcePath": "options\\mac\\options_mac.yy",
                 "resourceType": "GMMacOptions"
+            }
+        },
+        {
+            "Key": "f704aea1-34c5-43e8-857a-35606306fdc9",
+            "Value": {
+                "id": "1a6ebf7d-51ab-43e5-b1ae-2c2ede4bb883",
+                "resourcePath": "sounds\\sndGet\\sndGet.yy",
+                "resourceType": "GMSound"
             }
         },
         {
