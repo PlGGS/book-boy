@@ -33,22 +33,23 @@ surfCh1Pg3 = -1;
 surfCh1Pg4 = -1;
 surfCh1PgEnd = -1;
 // Adds a sheet saying "Chapter 1: Jailbreak"
-sheetCh1PgTitle_1 = ib_book_add_sheet(book, sprite_get_texture(spr_misc_sheet_front, 0), sprite_get_texture(spr_example_blank_sheet_back, 0), sheet_width, sheet_height,
-                  sprite_get_uvs(spr_misc_sheet_front, 0), sprite_get_uvs(spr_example_blank_sheet_back, 0));
+sheetCh1PgTitle_1 = ib_book_add_sheet(book, sprite_get_texture(spr_misc_sheet_front, 0), sprite_get_texture(spr_misc_sheet_back, 0), sheet_width, sheet_height,
+                  sprite_get_uvs(spr_misc_sheet_front, 0), sprite_get_uvs(spr_misc_sheet_back, 0));
 
-sheetCh1Pg2_3 = ib_book_add_sheet(book, sprite_get_texture(spr_example_blank_sheet_front, 0), sprite_get_texture(spr_example_blank_sheet_back, 0), sheet_width, sheet_height,
-                  sprite_get_uvs(spr_example_blank_sheet_front, 0), sprite_get_uvs(spr_example_blank_sheet_back, 0));
+sheetCh1Pg2_3 = ib_book_add_sheet(book, sprite_get_texture(spr_example_blank_sheet_front, 0), sprite_get_texture(spr_misc_sheet_back, 1), sheet_width, sheet_height,
+                  sprite_get_uvs(spr_example_blank_sheet_front, 0), sprite_get_uvs(spr_misc_sheet_back, 1));
 				  
-sheetCh1Pg4_End = ib_book_add_sheet(book, sprite_get_texture(spr_example_blank_sheet_front, 0), sprite_get_texture(spr_example_blank_sheet_back, 0), sheet_width, sheet_height,
-                  sprite_get_uvs(spr_example_blank_sheet_front, 0), sprite_get_uvs(spr_example_blank_sheet_back, 0));
-//create book boy
+sheetCh1Pg4_End = ib_book_add_sheet(book, sprite_get_texture(spr_example_blank_sheet_front, 0), sprite_get_texture(spr_misc_sheet_back, 2), sheet_width, sheet_height,
+                  sprite_get_uvs(spr_example_blank_sheet_front, 0), sprite_get_uvs(spr_misc_sheet_back, 2));
+//create objects
 instance_create(50, 112, objBookBoy);
+instance_create(50, 112, objBookBlock);
 
 // Creates a variable for a surface to contain our button example. Then a sheet is added to the book and its id is stored in sheet_buttons. This is similar to the way we create a surface
 // for the text sheets and store the sheet id there. After this, the button instances are created.
 sf_buttons = -1;
 sheet_buttons = ib_book_add_sheet(book, -1, -1);
-(instance_create(50, 112, objBookButton)).button_id = 0;
+(instance_create(0, 0, objBookButton)).button_id = 0;
 (instance_create(50, 308, objBookButton)).button_id = 1;
 
 // Creates a variable for a surface to contain our text input field example. Then a sheet is added to the book and its id is stored in sheet_input_field.

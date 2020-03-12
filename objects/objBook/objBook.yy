@@ -112,8 +112,36 @@
             "rangeMax": 10,
             "rangeMin": 0,
             "resourceFilter": 1023,
-            "value": "300",
+            "value": "252",
             "varName": "playerLocY",
+            "varType": 0
+        },
+        {
+            "id": "42a98c60-328e-4a3d-8954-3e55ce298edd",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "playerLocPrevX",
+            "varType": 0
+        },
+        {
+            "id": "44b43136-ff85-44fc-a28d-6a3148f5b9f0",
+            "modelName": "GMObjectProperty",
+            "mvc": "1.0",
+            "listItems": null,
+            "multiselect": false,
+            "rangeEnabled": false,
+            "rangeMax": 10,
+            "rangeMin": 0,
+            "resourceFilter": 1023,
+            "value": "0",
+            "varName": "playerLocPrevY",
             "varType": 0
         },
         {

@@ -45,8 +45,11 @@ if (ib_sheet_is_visible(sheetCh1PgTitle_1)) {
 		// Draws a sheet to the surface. Alphablend is disabled so that the blank sheet sprite will replace all pixels in the surface. Then draws the buttons.
 		// xstart, ystart is the position entered when the button was created, and since this is the button position relative to the sheet we use it.
 		draw_enable_alphablend(false);
-			draw_sprite(spr_example_blank_sheet_back, 0, 0, 0);
-			draw_sprite(objBookBoy.sprite_index, objBookBoy.image_index, playerLocX, playerLocY);
+			draw_sprite(spr_misc_sheet_back, 0, 0, 0);
+			draw_sprite_ext(objBookBoy.sprite_index, objBookBoy.image_index, playerLocX, playerLocY,
+								0.5, 0.5, 0, -1, 1);
+			draw_sprite_ext(objBookBlock.sprite_index, objBookBlock.image_index, 10, 
+								252 + (sprite_get_height(sprBookBoy) / 4), 11.6, 0.25, 0, -1, 1);
 		draw_enable_alphablend(true);
 	surface_reset_target();
 }
@@ -67,7 +70,10 @@ if (ib_sheet_is_visible(sheetCh1Pg2_3)) {
 		// xstart, ystart is the position entered when the button was created, and since this is the button position relative to the sheet we use it.
 		draw_enable_alphablend(false);
 			draw_sprite(spr_example_blank_sheet_front, 0, 0, 0);
-			draw_sprite(objBookBoy.sprite_index, objBookBoy.image_index, playerLocX - sheet_width, playerLocY);
+			draw_sprite_ext(objBookBoy.sprite_index, objBookBoy.image_index, playerLocX - sheet_width, playerLocY,
+								0.5, 0.5, 0, -1, 1);
+			draw_sprite_ext(objBookBlock.sprite_index, objBookBlock.image_index, 10 - sheet_width, 
+								252 + (sprite_get_height(sprBookBoy) / 4), 11.6, 0.25, 0, -1, 1);
 		draw_enable_alphablend(true);
 	surface_reset_target();
 
@@ -75,8 +81,11 @@ if (ib_sheet_is_visible(sheetCh1Pg2_3)) {
 		// Draws a sheet to the surface. Alphablend is disabled so that the blank sheet sprite will replace all pixels in the surface. Then draws the buttons.
 		// xstart, ystart is the position entered when the button was created, and since this is the button position relative to the sheet we use it.
 		draw_enable_alphablend(false);
-			draw_sprite(spr_example_blank_sheet_back, 0, 0, 0);
-			draw_sprite(objBookBoy.sprite_index, objBookBoy.image_index, playerLocX, playerLocY);
+			draw_sprite(spr_misc_sheet_back, 1, 0, 0);
+			draw_sprite_ext(objBookBoy.sprite_index, objBookBoy.image_index, playerLocX, playerLocY,
+								0.5, 0.5, 0, -1, 1);
+			draw_sprite_ext(objBookBlock.sprite_index, objBookBlock.image_index, 10, 
+								252 + (sprite_get_height(sprBookBoy) / 4), 11.6, 0.25, 0, -1, 1);
 		draw_enable_alphablend(true);
 	surface_reset_target();
 }
@@ -97,7 +106,10 @@ if (ib_sheet_is_visible(sheetCh1Pg4_End)) {
 		// xstart, ystart is the position entered when the button was created, and since this is the button position relative to the sheet we use it.
 		draw_enable_alphablend(false);
 			draw_sprite(spr_example_blank_sheet_front, 0, 0, 0);
-			draw_sprite(objBookBoy.sprite_index, objBookBoy.image_index, playerLocX - sheet_width, playerLocY);
+			draw_sprite_ext(objBookBoy.sprite_index, objBookBoy.image_index, playerLocX - sheet_width, playerLocY,
+								0.5, 0.5, 0, -1, 1);
+			draw_sprite_ext(objBookBlock.sprite_index, objBookBlock.image_index, 10 - sheet_width, 
+								252 + (sprite_get_height(sprBookBoy) / 4), 11.6, 0.25, 0, -1, 1);
 		draw_enable_alphablend(true);
 	surface_reset_target();
 
@@ -105,7 +117,7 @@ if (ib_sheet_is_visible(sheetCh1Pg4_End)) {
 		// Draws a sheet to the surface. Alphablend is disabled so that the blank sheet sprite will replace all pixels in the surface. Then draws the buttons.
 		// xstart, ystart is the position entered when the button was created, and since this is the button position relative to the sheet we use it.
 		draw_enable_alphablend(false);
-			draw_sprite(spr_example_blank_sheet_back, 0, 0, 0);
+			draw_sprite(spr_misc_sheet_back, 2, 0, 0);
 		draw_enable_alphablend(true);
 	surface_reset_target();
 }

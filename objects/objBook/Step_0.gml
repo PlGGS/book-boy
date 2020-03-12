@@ -1,3 +1,4 @@
+//chapter 1
 if ((ib_sheet_is_visible(sheetCh1PgTitle_1) && ib_sheet_is_visible(sheetCh1Pg2_3)) ||
 	 (ib_sheet_is_visible(sheetCh1Pg2_3) && ib_sheet_is_visible(sheetCh1Pg4_End))) {
 	//chapter 1 navigation
@@ -16,22 +17,50 @@ if ((ib_sheet_is_visible(sheetCh1PgTitle_1) && ib_sheet_is_visible(sheetCh1Pg2_3
 	    // Moves one sheet back in the book.
 		moveToPrevPage();
 	}
-		 
+	
 	//chapter 1 movement
 	if (!ib_book_is_transitioning(book)) {
 		// Lets the user move the player
-		if (keyboard_check(ord("A"))) {
-		    // Moves the player left
-			//sprPlayer.x += playerSpeed;
-			playerLocX -= playerSpeed;
+		if (playerLocX > ((sheet_width * 2) - (sprite_get_width(sprBookBoy) / 2))) {
+			playerLocX = ((sheet_width * 2) - (sprite_get_width(sprBookBoy) / 2)) - 1;
 		}
-		if (keyboard_check(ord("D"))) {
-		    // Moves the player backwards
-			//sprPlayer.x -= playerSpeed;
-			playerLocX += playerSpeed;
+		else if (playerLocX < (ib_book_get_left_sheet(book).x + (sprite_get_width(sprBookBoy)) + 6)) {
+			playerLocX = (ib_book_get_left_sheet(book).x + (sprite_get_width(sprBookBoy))) + 6;
+		}
+		else {
+			if (ib_sheet_is_visible(sheetCh1PgTitle_1) && ib_sheet_is_visible(sheetCh1Pg2_3)) {
+				show_debug_message(string(playerLocX));
+				if (keyboard_check(ord("A"))) {
+					
+					if (playerLocX + (objBookBoy.sprite_width / 2) < 140 ||
+						playerLocX > 140 && playerLocX - playerSpeed > 140) {
+						// Moves the player left
+						playerLocX -= playerSpeed;
+					}
+				}
+				if (keyboard_check(ord("D"))) {
+					if (playerLocX > 140 ||
+						playerLocX + (objBookBoy.sprite_width / 2) < 133 && playerLocX + (objBookBoy.sprite_width / 2) + playerSpeed < 133) {
+						// Moves the player backwards
+						playerLocX += playerSpeed;
+					}
+				}
+			}
+			else {
+				if (keyboard_check(ord("A"))) {
+					// Moves the player left
+					playerLocX -= playerSpeed;
+				}
+				if (keyboard_check(ord("D"))) {
+					// Moves the player backwards
+					playerLocX += playerSpeed;
+				}
+			}
+			
 		}
 	}
 }
+//intro
 else {
 	//intro navigation
 	if (keyboard_check_pressed(vk_right)) {
@@ -42,3 +71,6 @@ else {
 		moveToPrevPage();
 	}
 }
+
+playerLocPrevX = playerLocX;
+playerLocPrevY = playerLocY;
