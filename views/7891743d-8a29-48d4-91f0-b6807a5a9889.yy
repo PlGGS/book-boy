@@ -11,7 +11,10 @@
         "ad47fc09-f51b-458e-92ef-78a136d59efa",
         "9e8777da-3337-423e-b4d8-8a73c14d2ba5",
         "dd6a5f74-8ce8-4ba8-967e-e7b464e42d86",
-        "1fd46eec-ad5f-4065-bd0f-71ec851c4ade"
+        "1fd46eec-ad5f-4065-bd0f-71ec851c4ade",
+        "adced54b-69f8-4c5d-b323-2d9c32ee794a",
+        "17adf34c-07a6-4b21-bade-33cdf8cf5e42",
+        "3e345bfc-ce7d-4869-bce8-d9a7eb5b451d"
     ],
     "filterType": "GMObject",
     "folderName": "BookBoy",

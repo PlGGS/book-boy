@@ -58,8 +58,8 @@ sheetCh2PgTitle_1 = ib_book_add_sheet(book, sprite_get_texture(spr_misc_sheet_fr
                   sprite_get_uvs(spr_misc_sheet_front, 2), sprite_get_uvs(spr_misc_sheet_back, 0));
 
 // Adds the back cover sheet to the book
-ib_book_add_sheet(book, sprite_get_texture(spr_example_book_cover, 2), sprite_get_texture(spr_example_book_cover, 3), cover_width, cover_height,
-                  sprite_get_uvs(spr_example_book_cover, 2), sprite_get_uvs(spr_example_book_cover, 3), undefined, 10, undefined, 1, true, 2, 12);
+ib_book_add_sheet(book, sprite_get_texture(spr_my_book_cover, 2), sprite_get_texture(spr_my_book_cover, 1), cover_width, cover_height,
+                  sprite_get_uvs(spr_my_book_cover, 2), sprite_get_uvs(spr_my_book_cover, 1), undefined, 10, undefined, 1, true, 2, 12);
 
 // Enables inerpolation and vsync
 texture_set_interpolation(true);
